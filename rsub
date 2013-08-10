@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# rmate
+# rsub
 # Copyright (C) 2011-2013 by Harald Lapp <harald@octris.org>
 # 
 # This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 
 #
 # This script can be found at:
-# https://github.com/aurora/rmate
+# https://github.com/aurora/rsub
 #
 
 #
@@ -36,8 +36,8 @@
 hostname=`hostname`
 filepath=""
 
-host="${RMATE_HOST:-localhost}"
-port="${RMATE_PORT:-52698}"
+host="${RSUB_HOST:-localhost}"
+port="${RSUB_PORT:-52699}"
 selection=""
 displayname=""
 filetype=""
@@ -157,7 +157,7 @@ function handle_connection {
                     ;;
                 "data")
                     if [ "$tmp" = "" ]; then
-                        tmp="/tmp/rmate.$RANDOM.$$"
+                        tmp="/tmp/rsub.$RANDOM.$$"
                         touch "$tmp"
                     fi
                 
